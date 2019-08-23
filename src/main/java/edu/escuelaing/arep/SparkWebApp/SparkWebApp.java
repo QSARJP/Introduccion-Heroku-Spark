@@ -69,7 +69,7 @@ public class SparkWebApp {
 
     private static LinkedList lecturaDatos(Request req, Response res){
 
-      String respuesta = req.queryParams("firstname");
+      String respuesta = req.queryParams("Valores");
          List<String> array = Arrays.asList(respuesta.split(","));
          LinkedList list = new LinkedList();
          int num = 0;
