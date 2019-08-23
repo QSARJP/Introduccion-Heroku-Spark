@@ -21,7 +21,7 @@ public class SparkWebApp {
                 + "<h2>HTML Forms</h2>"
                 + "<form action=\"/results\">"
                 + "  First name:<br>"
-                + "  <input type=\"int\" name=\"firstname\" value=\"2\">"
+                + "  <input type=\"text\" name=\"firstname\" value=\"1,2,3,4,5,6,7,8,9,10,11,12,13\">"
                 + "  <br>"
                 + "  Last name:<br>"
                 + "  <input type=\"text\" name=\"lastname\" value=\"Mouse\">"
