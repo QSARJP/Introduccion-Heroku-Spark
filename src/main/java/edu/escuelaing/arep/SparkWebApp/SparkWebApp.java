@@ -34,8 +34,8 @@ public class SparkWebApp {
         return pageContent;
     }
 
-    private static int resultsPage(Request req, Response res) {
-        return Integer.parseInt(req.queryParams("firstname")) * Integer.parseInt(req.queryParams("firstname"));
+    private static String resultsPage(Request req, Response res) {
+        return req.queryParams("firstname");
     }
 
     /**
