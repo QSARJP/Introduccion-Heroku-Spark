@@ -42,7 +42,30 @@ public class SparkWebApp {
     }
 
     private static String resultsPage(Request req, Response res) {
-         String respuesta = req.queryParams("firstname");
+      LinkedList list = lecturaDatos(req,res);
+      Statistics stat = new Statistics(list);
+
+      String pageContent
+               = "<!DOCTYPE html>"
+               + "<html>"
+               + "<body>"
+               + "<h2>Answer</h2>"
+               + "<form action=\"/results\">"
+               + "  First name:<br>"
+               + "  Datos: "+list.showList()
+               + "  <br>"
+               + "  El promedio es: "+ stat.getPromedio()
+               + "  <br>"
+               + "  La desviacion estandar es : " + stat.getDesviacion()
+               + "</form>"
+               + "</body>"
+               + "</html>";
+      return pageContent;
+    }
+
+    private static LinkedList lecturaDatos(Request req, Response res){
+
+      String respuesta = req.queryParams("firstname");
          List<String> array = Arrays.asList(respuesta.split(","));
          LinkedList list = new LinkedList();
          int num = 0;
@@ -62,11 +85,8 @@ public class SparkWebApp {
             
          }
          list.getHead().setUltimoNodo(primario);
-         Statistics stat = new Statistics(list);
-
-         return "Datos: "+list.showList()+"El promedio es: "+ stat.getPromedio() + "\n y la desviacion estandar es : " + stat.getDesviacion();
+         return list;
     }
-
     /**
      * This method reads the default port as specified by the PORT variable in
      * the environment.
