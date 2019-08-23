@@ -84,10 +84,10 @@ public class LinkedList {
      */
 
     public String showList(){
-        String str = null;
+        String str =  " ";
 		Nodo current = head.getPrimerNodo();
 		while(current!=null){
-			str += current.displayLink() + "/n";
+			str += current.displayLink() + "\n";
 			current=current.getNextNode();
 		}
 		return str;
