@@ -36,7 +36,11 @@ public class SparkWebApp {
                 + "<h2>HTML Forms</h2>"
                 + "<form action=\"/results\">"
                 + "  Colocar los datos decimales con punto y separar los datos con comas:<br>"
-                + "  <input type=\"text\" name=\"Valores\" >"
+                + "  <input type=\"text\" name=\"Valores\" value=\"15.0,69.9,6.5,22.4,28.4,65.9,19.4,198.7,38.8,138.2\" >"
+                + "  <br><br>"
+                + "  <input type=\"submit\" value=\"Submit\">"
+                + "</form>"
+                + "<p>If you click the \"Submit\" button, the form-data will be sent to a page called \"/results\".</p>"
                 + "</body>"
                 + "</html>";
         return pageContent;
