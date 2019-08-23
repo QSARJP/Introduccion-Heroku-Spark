@@ -21,7 +21,7 @@ public class SparkWebApp {
                 + "<h2>HTML Forms</h2>"
                 + "<form action=\"/results\">"
                 + "  First name:<br>"
-                + "  <input type=\"text\" name=\"firstname\" value=\"Mickey\">"
+                + "  <input type=\"int\" name=\"firstname\" value=\"2\">"
                 + "  <br>"
                 + "  Last name:<br>"
                 + "  <input type=\"text\" name=\"lastname\" value=\"Mouse\">"
@@ -34,9 +34,8 @@ public class SparkWebApp {
         return pageContent;
     }
 
-    private static String resultsPage(Request req, Response res) {
-        return req.queryParams("firstname") + " " +
-                req.queryParams("lastname");
+    private static int resultsPage(Request req, Response res) {
+        return Integer.parseInt(req.queryParams("firstname")) * Integer.parseInt(req.queryParams("firstname"));
     }
 
     /**
