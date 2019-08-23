@@ -64,7 +64,7 @@ public class SparkWebApp {
          list.getHead().setUltimoNodo(primario);
          Statistics stat = new Statistics(list);
 
-         return "El promedio es: "+ stat.getPromedio() + "y la desviacion estandar es : " + stat.getDesviacion();
+         return "Datos: "+list.showList()+"El promedio es: "+ stat.getPromedio() + "/n y la desviacion estandar es : " + stat.getDesviacion();
     }
 
     /**

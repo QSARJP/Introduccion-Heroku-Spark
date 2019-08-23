@@ -83,13 +83,14 @@ public class LinkedList {
      * mostrar la conformacion del LinkedList 
      */
 
-    public void showList(){
+    public String showList(){
+        String str = null;
 		Nodo current = head.getPrimerNodo();
 		while(current!=null){
-			current.displayLink();
+			str += current.displayLink() + "/n";
 			current=current.getNextNode();
 		}
-		System.out.println();
+		return str;
 	} 
 
 

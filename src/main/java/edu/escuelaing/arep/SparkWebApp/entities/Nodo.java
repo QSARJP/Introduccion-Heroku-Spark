@@ -49,9 +49,9 @@ public class Nodo {
     /**
      * poder mostrar los datos de mejor manera 
      */
-    public void displayLink(){
+    public String displayLink(){
 		
-		System.out.println("["+idNodo+", "+data+"]");
+		return "["+idNodo+", "+data+"]";
 	}
 
 
