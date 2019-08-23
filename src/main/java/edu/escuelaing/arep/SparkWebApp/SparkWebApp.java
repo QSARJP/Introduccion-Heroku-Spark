@@ -4,18 +4,9 @@ import spark.Request;
 import spark.Response;
 import static spark.Spark.*;
 
-/**
- * Minimal web app example for Heroku using SparkWeb
- *
- * @author daniel
- */
+
 public class SparkWebApp {
 
-    /**
-     * This main method uses SparkWeb static methods and lambda functions to
-     * create a simple Hello World web app. It maps the lambda function to the
-     * /hello relative URL.
-     */
     public static void main(String[] args) {
         port(getPort());
         get("/inputdata", (req, res) -> inputDataPage(req, res));
