@@ -12,6 +12,14 @@ import edu.escuelaing.arep.SparkWebApp.entities.Nodo;
 import edu.escuelaing.arep.SparkWebApp.entities.Statistics;
 
 
+/**
+ * clase encargada de realizar la conexion con la pagina web por medio del framwork spark
+ *
+ * @author Ospina
+ * 
+ * @version (a version 22/8/19)
+ */
+
 public class SparkWebApp {
 
     public static void main(String[] args) {
@@ -27,15 +35,8 @@ public class SparkWebApp {
                 + "<body>"
                 + "<h2>HTML Forms</h2>"
                 + "<form action=\"/results\">"
-                + "  First name:<br>"
-                + "  <input type=\"text\" name=\"firstname\" value=\"1,2,3,4,5,6,7,8,9,10,11,12,13\">"
-                + "  <br>"
-                + "  Last name:<br>"
-                + "  <input type=\"text\" name=\"lastname\" value=\"Mouse\">"
-                + "  <br><br>"
-                + "  <input type=\"submit\" value=\"Submit\">"
-                + "</form>"
-                + "<p>If you click the \"Submit\" button, the form-data will be sent to a page called \"/results\".</p>"
+                + "  Colocar los datos decimales con punto y separar los datos con comas:<br>"
+                + "  <input type=\"text\" name=\"Valores\" >"
                 + "</body>"
                 + "</html>";
         return pageContent;
@@ -51,7 +52,6 @@ public class SparkWebApp {
                + "<body>"
                + "<h2>Answer</h2>"
                + "<form action=\"/results\">"
-               + "  First name:<br>"
                + "  Datos: "+list.showList()
                + "  <br>"
                + "  El promedio es: "+ stat.getPromedio()

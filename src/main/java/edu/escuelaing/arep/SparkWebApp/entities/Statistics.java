@@ -5,7 +5,7 @@ package edu.escuelaing.arep.SparkWebApp.entities;
  *
  * @author Ospina
  * 
- * @version (a version 15/8/19)
+ * @version (a version 22/8/19)
  */
 
 public class Statistics {
