@@ -4,6 +4,13 @@ import spark.Request;
 import spark.Response;
 import static spark.Spark.*;
 
+import java.util.Arrays;
+import java.util.List;
+
+import edu.escuelaing.arep.SparkWebApp.entities.LinkedList;
+import edu.escuelaing.arep.SparkWebApp.entities.Nodo;
+import edu.escuelaing.arep.SparkWebApp.entities.Statistics;
+
 
 public class SparkWebApp {
 
@@ -35,7 +42,29 @@ public class SparkWebApp {
     }
 
     private static String resultsPage(Request req, Response res) {
-        return req.queryParams("firstname");
+         String respuesta = req.queryParams("firstname");
+         List<String> array = Arrays.asList(respuesta.split(","));
+         LinkedList list = new LinkedList();
+         int num = 0;
+         Nodo primario = null ;
+         Nodo secundario = null ;
+         for (String i : array){
+            if (num == 0){
+               primario  = new Nodo(Float.parseFloat(i),num+1,null);
+               list.getHead().setPrimerNodo(primario);
+            }else{
+               secundario = primario;
+               primario  = new Nodo(Float.parseFloat(i),num+1,null);
+               secundario.setNextNode(primario);
+            }
+            num++;
+            list.addNode(primario);
+            
+         }
+         list.getHead().setUltimoNodo(primario);
+         Statistics stat = new Statistics(list);
+
+         return "El promedio es: "+ stat.getPromedio() + "y la desviacion estandar es : " + stat.getDesviacion();
     }
 
     /**
