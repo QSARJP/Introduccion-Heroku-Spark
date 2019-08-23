@@ -1,4 +1,4 @@
-# INTRODUCTION TO COMPLEX SYSTEMS, JAVA, MVN, AND GIT
+# INTRODUCTION TO COMPUTER SYSTEM DESIGN
 # 2019-2  Arquitectura empresarial Grupo: 1
 
 # Profesor
@@ -6,6 +6,11 @@
 
 # Integrante
 ## Juan Pablo Ospina Henao
+
+# Heroku app
+https://shielded-waters-61291.herokuapp.com/inputdata
+
+
 
 
 # Descripción del laboratorio
@@ -15,6 +20,11 @@ que requiere la lectura de datos de un archivo y su almacenaje con Linked List r
 
 
 # Diseño
+## Arquitectura
+### Spark
+Metodos:
+Get
+Post
 ## Modelo E-R
 ![](img/er.png)
 
