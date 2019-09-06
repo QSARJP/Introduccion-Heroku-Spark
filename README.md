@@ -15,8 +15,11 @@ https://shielded-waters-61291.herokuapp.com/inputdata
 
 # Descripción del laboratorio
 ### Descripción 
-Este laboratorio tiene como fin, recordar el manejo de mvn y de git en un problema de estadística 
-que requiere la lectura de datos de un archivo y su almacenaje con Linked List realizada por el estudiante.
+tiene como objetivo la construcción de un servidor Web (tipo apache) en Java.
+El servidor debe tener ciertos requisitos como ser capaz de entender páginas HTML e imágenes. 
+Además de eso el servidor debe proveer un framework IoC para la construcción de aplicaciones
+a partir de POJOS. Para este caso se tendrá una aplicación básica de calculadora la cual podremos 
+realizar actividades de suma, resta, multiplicación, división y potencia.
 
 
 # Diseño
